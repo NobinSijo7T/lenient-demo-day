@@ -44,7 +44,7 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
   ];
 
   return (
-    <footer className={[styles.footer, className].join(" ")}>
+    <footer className={[styles.footer, className].join(" ")} id="contact">
       {/* Decorative grid overlay */}
       <div className={styles.gridOverlay} aria-hidden="true">
         {Array.from({ length: 7 }).map((_, row) => (

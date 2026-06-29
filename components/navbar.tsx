@@ -11,6 +11,14 @@ export type NavbarType = {
 };
 
 const Navbar: NextPage<NavbarType> = ({ className = "" }) => {
+  const navItems = [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Problems", href: "#problems" },
+    { label: "FAQs", href: "#faqs" },
+    { label: "Contact", href: "#contact" },
+  ];
+
   const openRegistration = () => {
     window.open(
       "https://forms.gle/yGqLcHcexxrzBDxD8",
@@ -32,16 +40,25 @@ const Navbar: NextPage<NavbarType> = ({ className = "" }) => {
           />
           <span className={styles.logoText}>LENIENT TREE</span>
         </Link>
-        <CornerButton
-          accentColor="#5f7cff"
-          className={styles.registerCornerButton}
-          wrapperClassName={styles.registerCornerWrapper}
-          onClick={openRegistration}
-          showIcon={false}
-          type="button"
-        >
-          Register
-        </CornerButton>
+        <div className={styles.navActions}>
+          <div className={styles.navLinks} aria-label="Page sections">
+            {navItems.map((item) => (
+              <a className={styles.navLink} href={item.href} key={item.href}>
+                {item.label}
+              </a>
+            ))}
+          </div>
+          <CornerButton
+            accentColor="#5f7cff"
+            className={styles.registerCornerButton}
+            wrapperClassName={styles.registerCornerWrapper}
+            onClick={openRegistration}
+            showIcon={false}
+            type="button"
+          >
+            Register
+          </CornerButton>
+        </div>
       </div>
     </nav>
   );

@@ -55,7 +55,10 @@ const FrameComponent11111: NextPage<FrameComponent11111Type> = ({
   ];
 
   return (
-    <section className={[styles.demoDayShowcaseInner, className].join(" ")}>
+    <section
+      className={[styles.demoDayShowcaseInner, className].join(" ")}
+      id="about"
+    >
       <div className={styles.frameParent}>
         <div className={styles.readyToDiveIntoRealTimePWrapper}>
           <h1 className={styles.readyToDiveContainer}>

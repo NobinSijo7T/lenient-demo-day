@@ -9,11 +9,11 @@ import styles from "./demo-day-showcase.module.css";
 
 const DemoDayShowcase: NextPage = () => {
   return (
-    <div className={styles.demoDayShowcase}>
+    <div className={styles.demoDayShowcase} id="home">
       <Navbar />
       <Hero />
       <FrameComponent11111 />
-      <main className={styles.problemStatementsParent}>
+      <main className={styles.problemStatementsParent} id="problems">
         <h2 className={styles.problemStatements}>Problem Statements</h2>
         <section className={styles.frameParent}>
           <div className={styles.frameGroup}>

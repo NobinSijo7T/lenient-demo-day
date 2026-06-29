@@ -42,7 +42,7 @@ const FrameComponent111111: NextPage<FrameComponent111111Type> = ({
   ];
 
   return (
-    <section className={[styles.faqsParent, className].join(" ")}>
+    <section className={[styles.faqsParent, className].join(" ")} id="faqs">
       <h2 className={styles.faqs}>FAQs</h2>
       <div className={styles.component6Parent}>
         {faqs.map((faq, index) => {

@@ -3,6 +3,7 @@
   width: 100%;
   position: relative;
 }
+
 .frameParent {
   display: flex;
   flex-direction: column;
@@ -17,6 +18,7 @@
   color: #fff;
   font-family: Inter, sans-serif;
 }
+
 .frame {
   height: 1076px;
   background-image: url(/Frame@3x.png);
@@ -27,6 +29,7 @@
   z-index: 0;
   flex-shrink: 0;
 }
+
 .frame2,
 .frameChild {
   position: absolute;
@@ -34,12 +37,14 @@
   box-sizing: border-box;
   flex-shrink: 0;
 }
+
 .frameChild {
   top: 0.5px;
   left: 81.5px;
   width: 1281px;
   height: 1077px;
 }
+
 .frame2 {
   top: 150px;
   left: 0;
@@ -53,6 +58,7 @@
   font-size: 160px;
   font-family: Inter, sans-serif;
 }
+
 .demoDay {
   margin: 0;
   width: 100%;
@@ -66,11 +72,13 @@
   display: inline-block;
   max-width: 1160.2px;
 }
+
 .statEvents,
 .statsRow {
   display: flex;
   align-items: flex-start;
 }
+
 .statsRow {
   width: 100%;
   flex-wrap: wrap;
@@ -82,12 +90,14 @@
   color: #fff;
   font-family: Inter, sans-serif;
 }
+
 .statEvents {
   flex: 1;
   flex-direction: column;
   min-width: 170px;
   max-width: 226px;
 }
+
 .eventsConducted,
 .h2 {
   margin: 0;
@@ -97,11 +107,13 @@
   font-weight: 500;
   font-family: inherit;
 }
+
 .eventsConducted {
   font-size: 20px;
   font-weight: 400;
   color: #e2e2e2;
 }
+
 .statRegistrations {
   flex: 1;
   display: flex;
@@ -110,6 +122,7 @@
   min-width: 250px;
   max-width: 100%;
 }
+
 .introducing,
 .loremIpsumEvent {
   position: absolute;
@@ -118,12 +131,14 @@
   font-weight: 500;
   flex-shrink: 0;
 }
+
 .introducing {
   top: 276px;
   font-size: inherit;
   font-family: inherit;
   z-index: 4;
 }
+
 .loremIpsumEvent {
   width: 775px;
   top: calc(50% - 111.55px);
@@ -131,6 +146,7 @@
   display: inline-block;
   z-index: 2;
 }
+
 .chatgptImageJun24202604Icon,
 .mergedAsset1Icon {
   position: absolute;
@@ -138,6 +154,7 @@
   object-fit: cover;
   flex-shrink: 0;
 }
+
 .chatgptImageJun24202604Icon {
   width: 400px;
   top: calc(50% - 51.55px);
@@ -145,6 +162,7 @@
   max-height: 100%;
   z-index: 2;
 }
+
 .mergedAsset1Icon {
   width: 246px;
   height: 246px;
@@ -152,6 +170,7 @@
   left: calc(50% - 123px);
   z-index: 6;
 }
+
 .frame3 {
   width: 261px;
   height: 261px;
@@ -168,6 +187,7 @@
   z-index: 5;
   flex-shrink: 0;
 }
+
 .frameItem {
   align-self: stretch;
   flex: 1;
@@ -180,56 +200,72 @@
   .frame {
     max-width: 100%;
   }
+
   .frame2 {
     gap: 189px;
   }
 }
+
 @media screen and (max-width: 1200px) {
+
   .demoDay,
   .frame,
   .statsRow {
     max-width: 100%;
   }
 }
+
 @media screen and (max-width: 825px) {
   .frame {
     max-width: 100%;
   }
+
   .frame2 {
     gap: 94px;
   }
+
   .demoDay {
     font-size: 64px;
   }
+
   .statEvents {
     max-width: 100%;
   }
+
   .h2 {
     font-size: 38px;
   }
+
   .introducing {
     font-size: 27px;
   }
 }
+
 @media screen and (max-width: 450px) {
   .frame {
     max-width: 100%;
   }
+
   .frame2 {
     gap: 47px;
   }
+
   .demoDay {
     font-size: 40px;
   }
+
   .h2 {
     font-size: 29px;
   }
+
   .eventsConducted {
     font-size: 16px;
   }
+
   .introducing {
     font-size: 20px;
   }
+
   .loremIpsumEvent {
     font-size: 19px;
   }
