@@ -1,7 +1,7 @@
 .demoDayShowcaseInner {
   align-self: stretch;
   justify-content: flex-end;
-  padding: var(--padding-0) 50px var(--padding-80);
+  padding: 0 clamp(1.25rem, 4vw, 50px) var(--padding-80);
   box-sizing: border-box;
   flex-shrink: 0;
   text-align: left;
@@ -19,11 +19,11 @@
 .frameParent {
   flex: 1;
   flex-direction: column;
-  gap: 54px;
+  gap: clamp(1.75rem, 4vw, 54px);
 }
 .readyToDiveIntoRealTimePWrapper {
   width: 1306px;
-  padding: var(--padding-0) var(--padding-30);
+  padding: 0 clamp(0rem, 2vw, 30px);
   box-sizing: border-box;
 }
 .readyToDiveContainer {
@@ -35,6 +35,7 @@
   font-family: inherit;
   display: inline-block;
   max-width: 100%;
+  overflow-wrap: anywhere;
 }
 .readyTo {
   color: var(--color-gainsboro-300);
@@ -49,7 +50,7 @@
   width: 1282px;
   display: flex;
   align-items: flex-start;
-  padding: var(--padding-0) var(--padding-30) var(--padding-26);
+  padding: 0 clamp(0rem, 2vw, 30px) var(--padding-26);
   box-sizing: border-box;
   max-width: 100%;
   text-align: left;
@@ -63,34 +64,16 @@
   gap: var(--gap-40);
   max-width: 100%;
 }
-.ellipseParent,
 .frameGroup {
   display: flex;
   align-items: flex-start;
 }
-.frameChild,
-.frameInner,
-.frameItem {
-  width: var(--width-100);
-  position: relative;
-  border-radius: var(--br-50);
-  object-fit: cover;
-  flex-shrink: 0;
-}
-.frameChild {
-  height: var(--height-100);
-}
-.frameInner,
-.frameItem {
-  margin-left: -50px;
-}
-.frameItem {
-  height: var(--height-100);
-  z-index: 1;
-}
-.frameInner {
-  max-height: 100%;
-  z-index: 2;
+
+.avatarStack {
+  justify-content: flex-start;
+  padding: 0;
+  min-height: var(--height-100);
+  width: fit-content;
 }
 .loremIpsumEvent {
   margin: 0;
@@ -100,29 +83,39 @@
   font-family: inherit;
 }
 .frameContainer,
-.image13Parent {
+.logoMarquee,
+.logoTrack {
   display: flex;
   align-items: flex-start;
   flex-shrink: 0;
 }
 .frameContainer {
   align-self: stretch;
-  height: 90px;
+  min-height: 90px;
+  height: auto;
   border-radius: var(--br-4);
   background-color: var(--color-white);
   overflow: hidden;
-  justify-content: space-between;
-  padding: var(--padding-0) var(--padding-10) var(--padding-0) var(--padding-0);
+  padding: 0;
   box-sizing: border-box;
-  gap: var(--gap-20);
   opacity: 0.4;
   max-width: 100%;
 }
-.image13Parent {
-  margin-top: -1px;
-  overflow-x: auto;
-  gap: 48.5px;
-  max-width: calc(100% - 252px);
+
+.logoMarquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.logoTrack {
+  width: max-content;
+  gap: clamp(3rem, 12vw, 15rem);
+  animation: logoMarquee 28s linear infinite;
+  will-change: transform;
+}
+
+.logoMarquee:hover .logoTrack {
+  animation-play-state: paused;
 }
 .image12Icon,
 .image13Icon,
@@ -148,6 +141,15 @@
   margin-top: -1px;
   width: 232px;
 }
+
+@keyframes logoMarquee {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 @media screen and (max-width: 800px) {
   .demoDayShowcaseInner {
     padding-left: var(--padding-25);
@@ -159,20 +161,30 @@
     gap: var(--gap-27);
   }
   .readyToDiveContainer {
-    font-size: var(--fs-58);
+    font-size: clamp(2.4rem, 8vw, var(--fs-58));
   }
   .frameGroup {
     gap: var(--gap-20);
   }
-  .image13Parent {
+  .logoTrack {
     gap: var(--gap-24);
   }
 }
 @media screen and (max-width: 450px) {
   .readyToDiveContainer {
-    font-size: var(--fs-43);
+    font-size: clamp(2rem, 11vw, var(--fs-43));
   }
   .loremIpsumEvent {
     font-size: var(--fs-19);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .frameContainer {
+    padding: 0;
+  }
+
+  .logoTrack {
+    animation-duration: 20s;
   }
 }

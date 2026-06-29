@@ -2,9 +2,7 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import FrameComponent11 from "../components/frame-component11";
-import FrameComponent111 from "../components/frame-component111";
-import FrameComponent1111 from "../components/frame-component1111";
+import Hero from "../components/hero";
 import FrameComponent11111 from "../components/frame-component11111";
 import FrameComponent111111 from "../components/frame-component111111";
 import styles from "./demo-day-showcase.module.css";
@@ -13,11 +11,7 @@ const DemoDayShowcase: NextPage = () => {
   return (
     <div className={styles.demoDayShowcase}>
       <Navbar />
-      <FrameComponent11 />
-      <div className={styles.demoDayShowcaseChild} />
-      <div className={styles.demoDayShowcaseItem} />
-      <FrameComponent111 />
-      <FrameComponent1111 />
+      <Hero />
       <FrameComponent11111 />
       <main className={styles.problemStatementsParent}>
         <h2 className={styles.problemStatements}>Problem Statements</h2>

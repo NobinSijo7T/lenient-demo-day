@@ -2,11 +2,11 @@
   width: 100%;
   position: relative;
   background-color: var(--color-white);
-  overflow: hidden;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 120px var(--padding-0) 0;
+  padding: 0;
   box-sizing: border-box;
   isolation: isolate;
   line-height: normal;
@@ -37,9 +37,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--padding-60) 120px;
+  padding: var(--padding-60) clamp(1.25rem, 8vw, 120px);
   box-sizing: border-box;
-  gap: 61px;
+  gap: clamp(1.75rem, 5vw, 61px);
   max-width: 100%;
   z-index: 6;
   flex-shrink: 0;
@@ -56,6 +56,7 @@
   background: var(--gradient-2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: clamp(2.4rem, 7vw, var(--fs-72));
 }
 .frameParent {
   align-self: stretch;
@@ -69,6 +70,10 @@
   font-size: var(--fs-40);
   color: var(--color-white);
   font-family: var(--font-inter);
+  border-radius: var(--br-8);
+  animation: cardParallax linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
 }
 .frameContainer,
 .frameGroup,
@@ -78,12 +83,13 @@
   max-width: 100%;
 }
 .frameGroup {
-  width: var(--width-1144);
+  width: 100%;
   justify-content: space-between;
   gap: var(--gap-20);
 }
 .frameContainer {
   gap: var(--gap-27);
+  min-width: 0;
 }
 .wrapper {
   width: 48px;
@@ -117,8 +123,8 @@
 }
 .studentCareerRoadmap {
   margin: 0;
-  width: 568px;
-  height: var(--height-44);
+  width: min(568px, 100%);
+  height: auto;
   position: relative;
   font-size: inherit;
   letter-spacing: -0.02em;
@@ -143,6 +149,7 @@
 .frameDiv {
   justify-content: flex-end;
   gap: var(--gap-20);
+  flex-wrap: wrap;
 }
 .beginnerWrapper {
   background-color: var(--color-royalblue-100);
@@ -177,31 +184,31 @@
   gap: var(--gap-16);
   font-size: var(--fs-24);
   color: var(--color-dimgray);
+  width: 100%;
 }
 .frameWrapper2 {
-  width: var(--width-768);
+  width: min(100%, var(--width-768));
   background-color: var(--color-white);
   overflow: hidden;
   flex-shrink: 0;
 }
 .studentsOftenHaveACareerGParent {
-  height: var(--height-240);
-  width: var(--width-785);
+  min-height: var(--height-240);
+  height: auto;
+  width: 100%;
   position: relative;
   flex-shrink: 0;
 }
 .studentsOftenHave {
   margin: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   font-size: inherit;
   letter-spacing: 0.02em;
   line-height: 126%;
   font-weight: 400;
   font-family: inherit;
   display: inline-block;
-  width: var(--width-768);
+  width: 100%;
 }
 .frameChild {
   position: absolute;
@@ -213,7 +220,7 @@
   z-index: 1;
 }
 .ced10721c14ab2Ae94De09d1ebIcon {
-  width: var(--width-360);
+  width: min(100%, var(--width-360));
   position: relative;
   border-radius: var(--br-8);
   max-height: 100%;
@@ -226,7 +233,7 @@
   align-items: flex-start;
 }
 .frameParent3 {
-  width: var(--width-1144);
+  width: 100%;
   justify-content: space-between;
   gap: var(--gap-20);
   max-width: 100%;
@@ -250,8 +257,8 @@
   font-weight: 400;
 }
 .hackathonPreparationAssistan {
-  width: 545px;
-  height: var(--height-44);
+  width: min(545px, 100%);
+  height: auto;
   letter-spacing: -0.02em;
   font-weight: 500;
 }
@@ -306,16 +313,15 @@
   background-color: var(--color-slateblue);
 }
 .manyStudentsParticipateInHParent {
-  height: var(--height-240);
-  width: 787px;
+  min-height: var(--height-240);
+  height: auto;
+  width: 100%;
   position: relative;
   flex-shrink: 0;
 }
 .manyStudentsParticipate {
   margin: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   font-size: inherit;
   letter-spacing: 0.02em;
   line-height: 126%;
@@ -343,6 +349,21 @@
   font-size: var(--fs-40);
   color: var(--color-white);
   font-family: var(--font-inter);
+  border-radius: var(--br-8);
+  animation: cardParallax linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
+}
+
+@keyframes cardParallax {
+  from {
+    opacity: 0.35;
+    transform: translateY(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .frame {
   background-color: var(--color-gray-100);
@@ -371,8 +392,8 @@
 }
 .aiResume {
   margin: 0;
-  width: 528px;
-  height: var(--height-44);
+  width: min(528px, 100%);
+  height: auto;
   position: relative;
   font-size: inherit;
   letter-spacing: -0.02em;
@@ -388,12 +409,14 @@
   text-align: left;
   font-size: var(--fs-24);
   color: var(--color-dimgray);
+  width: 100%;
 }
 .frameParent13 {
   display: flex;
   align-items: flex-end;
   gap: var(--gap-27);
   max-width: 100%;
+  width: 100%;
 }
 .studentInnovationCommunityPParent {
   display: flex;
@@ -402,11 +425,12 @@
   max-width: 100%;
   font-size: var(--fs-36);
   color: var(--color-black);
+  min-width: 0;
 }
 .studentInnovationCommunity {
   margin: 0;
-  height: var(--height-44);
-  width: 663px;
+  height: auto;
+  width: min(663px, 100%);
   position: relative;
   font-size: inherit;
   letter-spacing: -0.02em;
@@ -433,17 +457,15 @@
   display: inline-block;
 }
 .studentsFrequentlyStruggle {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   letter-spacing: 0.02em;
   line-height: 126%;
   font-weight: 400;
-  width: 770px;
+  width: 100%;
 }
 .skillVerificationPlatform {
-  width: 413px;
-  height: var(--height-44);
+  width: min(413px, 100%);
+  height: auto;
   position: relative;
   letter-spacing: -0.02em;
   font-weight: 500;
@@ -455,15 +477,17 @@
   max-width: 100%;
 }
 .frameParent22 {
-  gap: 73px;
+  width: 100%;
+  justify-content: space-between;
+  gap: clamp(1.25rem, 5vw, 73px);
 }
 .frameParent23 {
   gap: var(--gap-27);
 }
 .web3Learning {
   margin: 0;
-  width: 600px;
-  height: var(--height-44);
+  width: min(600px, 100%);
+  height: auto;
   position: relative;
   font-size: inherit;
   letter-spacing: -0.02em;
@@ -494,17 +518,17 @@
 .aiStudy,
 .collegeInnovationDashboard,
 .internshipMatchingPlatform {
-  width: 498px;
-  height: var(--height-44);
+  width: min(498px, 100%);
+  height: auto;
   letter-spacing: -0.02em;
   font-weight: 500;
 }
 .aiStudy,
 .internshipMatchingPlatform {
-  width: 464px;
+  width: min(464px, 100%);
 }
 .internshipMatchingPlatform {
-  width: 480px;
+  width: min(480px, 100%);
 }
 .wrapper8 {
   background-color: var(--color-gray-100);
@@ -530,11 +554,12 @@
   max-width: 100%;
   font-size: var(--fs-36);
   color: var(--color-black);
+  min-width: 0;
 }
 .lenientTreeOpen {
   margin: 0;
-  height: var(--height-44);
-  width: 661px;
+  height: auto;
+  width: min(661px, 100%);
   position: relative;
   font-size: inherit;
   letter-spacing: -0.02em;
@@ -561,7 +586,7 @@
   }
   .ced10721c14ab2Ae94De09d1ebIcon,
   .frameWrapper2 {
-    flex: 1;
+    flex: 1 1 320px;
   }
   .frameParent3 {
     flex-wrap: wrap;
@@ -596,12 +621,9 @@
 @media screen and (max-width: 800px) {
   .problemStatementsParent {
     gap: var(--gap-30);
-    padding-left: var(--padding-60);
-    padding-right: var(--padding-60);
+    padding-left: clamp(1.25rem, 6vw, var(--padding-60));
+    padding-right: clamp(1.25rem, 6vw, var(--padding-60));
     box-sizing: border-box;
-  }
-  .problemStatements {
-    font-size: var(--fs-58);
   }
   .frameContainer {
     flex-wrap: wrap;
@@ -610,7 +632,7 @@
     font-size: var(--fs-32);
   }
   .studentCareerRoadmap {
-    font-size: var(--fs-29);
+    font-size: clamp(1.5rem, 5vw, var(--fs-29));
   }
   .frameDiv {
     flex-wrap: wrap;
@@ -619,7 +641,7 @@
     font-size: var(--fs-32);
   }
   .hackathonPreparationAssistan {
-    font-size: var(--fs-29);
+    font-size: clamp(1.5rem, 5vw, var(--fs-29));
   }
   .h23 {
     font-size: var(--fs-32);
@@ -627,13 +649,13 @@
   .aiResume,
   .skillVerificationPlatform,
   .studentInnovationCommunity {
-    font-size: var(--fs-29);
+    font-size: clamp(1.5rem, 5vw, var(--fs-29));
   }
   .frameParent22 {
     gap: 18px;
   }
   .web3Learning {
-    font-size: var(--fs-29);
+    font-size: clamp(1.5rem, 5vw, var(--fs-29));
   }
   .h27 {
     font-size: var(--fs-32);
@@ -641,13 +663,13 @@
   .aiStudy,
   .collegeInnovationDashboard,
   .internshipMatchingPlatform {
-    font-size: var(--fs-29);
+    font-size: clamp(1.5rem, 5vw, var(--fs-29));
   }
   .h210 {
     font-size: var(--fs-32);
   }
   .lenientTreeOpen {
-    font-size: var(--fs-29);
+    font-size: clamp(1.5rem, 5vw, var(--fs-29));
   }
 }
 @media screen and (max-width: 450px) {
@@ -657,12 +679,8 @@
     padding-right: var(--padding-20);
     box-sizing: border-box;
   }
-  .problemStatements {
-    font-size: var(--fs-43);
-  }
   .frameParent {
-    padding-top: var(--padding-20);
-    padding-bottom: var(--padding-20);
+    padding: var(--padding-20);
     box-sizing: border-box;
   }
   .h2 {
@@ -718,5 +736,65 @@
   }
   .lenientTreeOpen {
     font-size: var(--fs-22);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .demoDayShowcase {
+    align-items: stretch;
+  }
+
+  .frameParent,
+  .frameParent7 {
+    padding: clamp(1rem, 5vw, var(--padding-28));
+  }
+
+  .frameGroup,
+  .frameParent2,
+  .frameParent3,
+  .frameParent11,
+  .frameParent13,
+  .frameParent22,
+  .frameParent23,
+  .lenientTreeOpenInnovationCParent,
+  .studentInnovationCommunityPParent {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .frameDiv {
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  .beginnerWrapper,
+  .intermediateWrapper,
+  .advancedWrapper,
+  .beginnerContainer,
+  .intermediateContainer,
+  .advancedContainer {
+    padding: 0.35rem 0.75rem;
+  }
+
+  .studentsOftenHaveACareerGParent,
+  .manyStudentsParticipateInHParent {
+    min-height: 0;
+  }
+
+  .studentsOftenHave,
+  .manyStudentsParticipate,
+  .studentsFrequentlyStruggle {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .frameChild {
+    display: none;
+  }
+
+  .ced10721c14ab2Ae94De09d1ebIcon {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    max-height: none;
   }
 }

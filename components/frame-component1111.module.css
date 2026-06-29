@@ -1,9 +1,9 @@
 .demoDayShowcaseInner {
-  width: 1362px;
+  width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
-  padding: var(--padding-0) 62px 253px;
+  padding: clamp(5.5rem, 10vw, 120px) clamp(1.25rem, 5vw, 62px) clamp(6rem, 18vw, 253px);
   box-sizing: border-box;
   max-width: 100%;
   flex-shrink: 0;
@@ -25,9 +25,12 @@
 }
 .introducingParent {
   text-align: left;
-  font-size: 34px;
+  font-size: clamp(1.4rem, 3vw, 34px);
   color: var(--color-white);
   font-family: var(--font-inter);
+  animation: heroCopyParallax linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 70vh;
 }
 .introducing {
   margin: 0;
@@ -44,7 +47,7 @@
   max-width: 100%;
   margin-top: -7px;
   position: relative;
-  font-size: 160px;
+  font-size: clamp(3.2rem, 12vw, 160px);
 }
 .demoDay,
 .loremIpsumEvent {
@@ -59,10 +62,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: 3;
+  line-height: 0.95;
 }
 .loremIpsumEvent {
   width: 775px;
-  font-size: var(--fs-24);
+  font-size: clamp(1rem, 2vw, 1.5rem);
   font-weight: 500;
   display: inline-block;
   max-width: 100%;
@@ -75,10 +79,13 @@
   justify-content: space-between;
   gap: var(--gap-20);
   max-width: 100%;
+  animation: heroStatsParallax linear both;
+  animation-timeline: scroll(root);
+  animation-range: 12vh 95vh;
 }
 .frameWrapper {
   flex-direction: column;
-  padding: var(--padding-0) var(--padding-0) 70px;
+  padding: 0 0 clamp(1.5rem, 6vw, 70px);
   box-sizing: border-box;
   max-width: 100%;
 }
@@ -90,7 +97,8 @@
 }
 .frameContainer {
   align-self: stretch;
-  gap: 63px;
+  gap: clamp(1.25rem, 5vw, 63px);
+  flex-wrap: wrap;
 }
 .parent {
   flex-direction: column;
@@ -128,12 +136,46 @@
   z-index: 4;
 }
 .chatgptImageJun24202604Icon {
-  width: 400px;
+  width: clamp(220px, 34vw, 400px);
   position: relative;
   max-height: 100%;
   object-fit: cover;
   max-width: 100%;
   z-index: 3;
+  animation: heroFlagParallax linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 90vh;
+}
+
+@keyframes heroCopyParallax {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-96px);
+  }
+}
+
+@keyframes heroStatsParallax {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-52px);
+  }
+}
+
+@keyframes heroFlagParallax {
+  from {
+    transform: translateY(0) rotate(0deg);
+  }
+  to {
+    transform: translateY(-130px) rotate(-5deg);
+  }
 }
 @media screen and (max-width: 1350px) {
   .demoDayShowcaseInner {
@@ -163,9 +205,6 @@
   .introducing {
     font-size: 27px;
   }
-  .demoDay {
-    font-size: var(--fs-64);
-  }
   .frameWrapper {
     min-width: 100%;
   }
@@ -180,9 +219,6 @@
   .introducing {
     font-size: var(--fs-20);
   }
-  .demoDay {
-    font-size: var(--fs-40);
-  }
   .loremIpsumEvent {
     font-size: var(--fs-19);
   }
@@ -195,5 +231,20 @@
   .eventsConducted,
   .registrationsAcrossEvents {
     font-size: var(--fs-16);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .demoDayShowcaseInner {
+    padding-bottom: 4rem;
+  }
+
+  .frameGroup {
+    align-items: flex-start;
+  }
+
+  .chatgptImageJun24202604Icon {
+    align-self: center;
+    width: min(82vw, 320px);
   }
 }

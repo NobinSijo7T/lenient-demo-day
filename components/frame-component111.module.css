@@ -4,33 +4,51 @@
   display: flex;
   max-width: 100%;
 }
+
+/* This entire component is hidden — the floating navbar handles logo + register */
 .demoDayShowcaseInner {
-  align-items: flex-start;
-  justify-content: center;
-  padding: var(--padding-0) var(--padding-40) 163px var(--padding-20);
-  box-sizing: border-box;
-  flex-shrink: 0;
+  display: none !important;
 }
+
 .frameParent {
   width: 1224px;
   align-items: flex-end;
   justify-content: space-between;
   gap: var(--gap-20);
+  animation: heroTopParallax linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 55vh;
 }
+
 .frameGroup,
 .ltWw1Wrapper {
   align-self: stretch;
   display: flex;
   align-items: flex-start;
 }
+
+@keyframes heroTopParallax {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0.35;
+    transform: translateY(-56px);
+  }
+}
+
 .frameGroup {
   gap: var(--gap-16);
   max-width: 100%;
 }
+
 .ltWw1Wrapper {
   flex-direction: column;
   padding: var(--padding-4) var(--padding-0) var(--padding-0);
 }
+
 .ltWw1,
 .ltWw2 {
   position: relative;
@@ -38,14 +56,17 @@
   object-fit: cover;
   z-index: 2;
 }
+
 .ltWw1 {
   width: 100%;
   flex: 1;
   height: auto;
 }
+
 .ltWw2 {
-  width: 269px;
+  width: clamp(170px, 22vw, 269px);
 }
+
 .frameWrapper {
   display: flex;
   flex-direction: column;
@@ -53,10 +74,11 @@
   justify-content: flex-end;
   padding: var(--padding-0) var(--padding-0) var(--padding-4);
 }
+
 .registerWrapper {
   cursor: pointer;
   border: 0;
-  padding: var(--padding-10) var(--padding-40);
+  padding: 0.6rem clamp(1.25rem, 3vw, 2.5rem);
   background-color: var(--color-white);
   align-self: stretch;
   border-radius: 31px;
@@ -64,14 +86,31 @@
   align-items: center;
   justify-content: center;
 }
+
 .registerWrapper:hover {
   background-color: var(--color-gainsboro-100);
 }
+
 .register {
   position: relative;
-  font-size: var(--fs-24);
+  font-size: clamp(1rem, 2vw, 1.5rem);
   font-weight: 300;
   font-family: var(--font-inter);
   color: var(--color-gray-200);
   text-align: left;
+}
+
+@media screen and (max-width: 640px) {
+  .demoDayShowcaseInner {
+    padding-bottom: 3rem;
+  }
+
+  .frameParent {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .frameGroup {
+    align-self: auto;
+  }
 }

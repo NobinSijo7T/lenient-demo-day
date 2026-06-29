@@ -1,5 +1,7 @@
+"use client";
+
+import { useState } from "react";
 import type { NextPage } from "next";
-import Image from "next/image";
 import styles from "./frame-component111111.module.css";
 
 export type FrameComponent111111Type = {
@@ -9,213 +11,63 @@ export type FrameComponent111111Type = {
 const FrameComponent111111: NextPage<FrameComponent111111Type> = ({
   className = "",
 }) => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      question: "Size of a team allowed?",
+      answer:
+        "Traditional certificates often fail to demonstrate real-world competency. Employers increasingly value practical skills and project experience over theoretical qualifications.",
+    },
+    {
+      question: "Who can participate?",
+      answer:
+        "Students, early builders, and teams interested in solving practical innovation challenges can participate.",
+    },
+    {
+      question: "Is this an online event?",
+      answer:
+        "Event format and venue details will be shared with registered participants before the challenge begins.",
+    },
+    {
+      question: "Do we need a finished product?",
+      answer:
+        "No. A working prototype, strong problem understanding, and clear execution plan are enough for demo day.",
+    },
+    {
+      question: "Can beginners join?",
+      answer:
+        "Yes. The problem statements include beginner, intermediate, and advanced tracks so teams can choose their comfort level.",
+    },
+  ];
+
   return (
     <section className={[styles.faqsParent, className].join(" ")}>
       <h2 className={styles.faqs}>FAQs</h2>
       <div className={styles.component6Parent}>
-        <section className={styles.component6}>
-          <Image
-            className={styles.component6Child}
-            width={1200}
-            height={184}
-            sizes="100vw"
-            alt=""
-            src="/Rectangle-98.svg"
-          />
-          <Image
-            className={styles.component6Item}
-            width={1136}
-            height={122}
-            sizes="100vw"
-            alt=""
-            src="/Rectangle-99.svg"
-          />
-          <div className={styles.sizeOfATeamAllowedParent}>
-            <h2 className={styles.sizeOfA}>Size of a team allowed?</h2>
-            <Image
-              className={styles.unionIcon}
-              width={46}
-              height={46}
-              sizes="100vw"
-              alt=""
-              src="/Union@2x.png"
-            />
-          </div>
-        </section>
-        <section className={styles.component6}>
-          <Image
-            className={styles.component6Child}
-            width={1200}
-            height={184}
-            sizes="100vw"
-            alt=""
-            src="/Rectangle-98.svg"
-          />
-          <Image
-            className={styles.component6Item}
-            width={1136}
-            height={122}
-            sizes="100vw"
-            alt=""
-            src="/Rectangle-99.svg"
-          />
-          <div className={styles.sizeOfATeamAllowedParent}>
-            <h2 className={styles.sizeOfA}>Size of a team allowed?</h2>
-            <Image
-              className={styles.unionIcon}
-              width={46}
-              height={46}
-              sizes="100vw"
-              alt=""
-              src="/Union@2x.png"
-            />
-          </div>
-        </section>
-        <section className={styles.component6}>
-          <Image
-            className={styles.component6Child}
-            width={1200}
-            height={184}
-            sizes="100vw"
-            alt=""
-            src="/Rectangle-98.svg"
-          />
-          <Image
-            className={styles.component6Item}
-            width={1136}
-            height={122}
-            sizes="100vw"
-            alt=""
-            src="/Rectangle-99.svg"
-          />
-          <div className={styles.sizeOfATeamAllowedParent}>
-            <h2 className={styles.sizeOfA}>Size of a team allowed?</h2>
-            <Image
-              className={styles.unionIcon}
-              width={46}
-              height={46}
-              sizes="100vw"
-              alt=""
-              src="/Union@2x.png"
-            />
-          </div>
-        </section>
-        <section className={styles.component6}>
-          <Image
-            className={styles.component6Child}
-            width={1200}
-            height={184}
-            sizes="100vw"
-            alt=""
-            src="/Rectangle-98.svg"
-          />
-          <Image
-            className={styles.component6Item}
-            width={1136}
-            height={122}
-            sizes="100vw"
-            alt=""
-            src="/Rectangle-99.svg"
-          />
-          <div className={styles.sizeOfATeamAllowedParent}>
-            <h2 className={styles.sizeOfA}>Size of a team allowed?</h2>
-            <Image
-              className={styles.unionIcon}
-              width={46}
-              height={46}
-              sizes="100vw"
-              alt=""
-              src="/Union@2x.png"
-            />
-          </div>
-        </section>
-        <section className={styles.component6}>
-          <Image
-            className={styles.component6Child}
-            width={1200}
-            height={184}
-            sizes="100vw"
-            alt=""
-            src="/Rectangle-98.svg"
-          />
-          <Image
-            className={styles.component6Item}
-            width={1136}
-            height={122}
-            sizes="100vw"
-            alt=""
-            src="/Rectangle-99.svg"
-          />
-          <div className={styles.sizeOfATeamAllowedParent}>
-            <h2 className={styles.sizeOfA}>Size of a team allowed?</h2>
-            <Image
-              className={styles.unionIcon}
-              width={46}
-              height={46}
-              sizes="100vw"
-              alt=""
-              src="/Union@2x.png"
-            />
-          </div>
-        </section>
-        <section className={styles.component6}>
-          <Image
-            className={styles.component6Child}
-            width={1200}
-            height={184}
-            sizes="100vw"
-            alt=""
-            src="/Rectangle-98.svg"
-          />
-          <Image
-            className={styles.component6Item}
-            width={1136}
-            height={122}
-            sizes="100vw"
-            alt=""
-            src="/Rectangle-99.svg"
-          />
-          <div className={styles.sizeOfATeamAllowedParent}>
-            <h2 className={styles.sizeOfA}>Size of a team allowed?</h2>
-            <Image
-              className={styles.unionIcon}
-              width={46}
-              height={46}
-              sizes="100vw"
-              alt=""
-              src="/Union@2x.png"
-            />
-          </div>
-        </section>
-        <section className={styles.component6}>
-          <Image
-            className={styles.component6Child}
-            width={1200}
-            height={184}
-            sizes="100vw"
-            alt=""
-            src="/Rectangle-98.svg"
-          />
-          <Image
-            className={styles.component6Item}
-            width={1136}
-            height={122}
-            sizes="100vw"
-            alt=""
-            src="/Rectangle-99.svg"
-          />
-          <div className={styles.sizeOfATeamAllowedParent}>
-            <h2 className={styles.sizeOfA}>Size of a team allowed?</h2>
-            <Image
-              className={styles.unionIcon}
-              width={46}
-              height={46}
-              sizes="100vw"
-              alt=""
-              src="/Union@2x.png"
-            />
-          </div>
-        </section>
+        {faqs.map((faq, index) => {
+          const isOpen = openIndex === index;
+
+          return (
+            <section
+              className={`${styles.component6} ${isOpen ? styles.open : ""}`}
+              key={faq.question}
+            >
+              <div className={styles.answerPanel}>
+                <p>{faq.answer}</p>
+              </div>
+              <button
+                className={styles.sizeOfATeamAllowedParent}
+                type="button"
+                aria-expanded={isOpen}
+                onClick={() => setOpenIndex(isOpen ? null : index)}
+              >
+                <span className={styles.sizeOfA}>{faq.question}</span>
+                <span className={styles.unionIcon} aria-hidden="true" />
+              </button>
+            </section>
+          );
+        })}
       </div>
     </section>
   );
