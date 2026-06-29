@@ -1,0 +1,146 @@
+.faqsParent {
+  align-self: stretch;
+  background-color: var(--color-white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-60) 120px;
+  gap: 61px;
+  z-index: 7;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: var(--fs-72);
+  font-family: var(--font-inter);
+}
+.faqs {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  background: var(--gradient-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.component6,
+.component6Parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.component6Parent {
+  gap: var(--gap-20);
+}
+.component6 {
+  height: var(--height-184);
+  justify-content: flex-end;
+  padding: var(--padding-86) var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  text-align: left;
+  font-size: var(--fs-36);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+.component6Child,
+.component6Item {
+  position: absolute;
+  margin: 0 !important;
+  border-radius: var(--br-40);
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.component6Child {
+  width: 100%;
+  height: var(--height-184);
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+}
+.component6Item {
+  width: var(--width-calc100-64);
+  height: var(--height-122);
+  top: 62px;
+  right: 32px;
+  left: 32px;
+  z-index: 1;
+}
+.sizeOfATeamAllowedParent {
+  width: var(--width-1202);
+  height: var(--height-100);
+  border-radius: var(--br-8);
+  background-color: var(--color-mediumslateblue-300);
+  border: var(--border-1);
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-26) var(--padding-26) var(--padding-28);
+  position: relative;
+  isolation: isolate;
+  z-index: 2;
+  flex-shrink: 0;
+}
+.sizeOfA {
+  margin: 0;
+  height: var(--height-44);
+  width: var(--width-389);
+  position: relative;
+  font-size: inherit;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 0;
+  flex-shrink: 0;
+}
+.unionIcon {
+  height: var(--height-46);
+  width: var(--width-46);
+  position: absolute;
+  margin: 0 !important;
+  top: calc(50% - 23px);
+  right: 26px;
+  object-fit: contain;
+  z-index: 1;
+  flex-shrink: 0;
+}
+@media screen and (max-width: 1350px) {
+  .faqsParent {
+    padding-top: 39px;
+    padding-bottom: 39px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1125px) {
+  .faqsParent {
+    padding-top: var(--padding-25);
+    padding-bottom: var(--padding-25);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 800px) {
+  .faqsParent {
+    gap: var(--gap-30);
+    padding-left: var(--padding-60);
+    padding-right: var(--padding-60);
+    box-sizing: border-box;
+  }
+  .faqs {
+    font-size: var(--fs-58);
+  }
+}
+@media screen and (max-width: 450px) {
+  .faqsParent {
+    gap: var(--gap-15);
+    padding: var(--padding-20);
+    box-sizing: border-box;
+  }
+  .faqs {
+    font-size: var(--fs-43);
+  }
+}

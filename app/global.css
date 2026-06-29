@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,700;0,800&display=swap");
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* Common Style Variables */
+
+  /* Color */
+  --color-black: #000;
+  --color-darkgray-100: #9f9c9f;
+  --color-darkgray-200: #9b9b9b;
+  --color-dimgray: #4f546b;
+  --color-gainsboro-100: #e6e6e6;
+  --color-gainsboro-200: #e2e2e2;
+  --color-gainsboro-300: #dedede;
+  --color-gray-100: #0e1532;
+  --color-gray-200: #0f0f0f;
+  --color-mediumslateblue-100: #3059e9;
+  --color-mediumslateblue-200: #2256e5;
+  --color-mediumslateblue-300: #1d51e3;
+  --color-navy: #001482;
+  --color-royalblue-100: #7583ff;
+  --color-royalblue-200: #5780ff;
+  --color-royalblue-300: #5c69e6;
+  --color-slateblue: #3347b5;
+  --color-white: #fff;
+  --color-whitesmoke: #eff1f3;
+
+  /* Gap */
+  --gap-2: 2px;
+  --gap-15: 15px;
+  --gap-16: 16px;
+  --gap-20: 20px;
+  --gap-22: 22px;
+  --gap-24: 24px;
+  --gap-27: 27px;
+  --gap-30: 30px;
+  --gap-40: 40px;
+
+  /* Padding */
+  --padding-0: 0px;
+  --padding-2: 2px;
+  --padding-4: 4px;
+  --padding-8: 8px;
+  --padding-10: 10px;
+  --padding-11: 11px;
+  --padding-12: 12px;
+  --padding-20: 20px;
+  --padding-25: 25px;
+  --padding-26: 26px;
+  --padding-28: 28px;
+  --padding-30: 30px;
+  --padding-40: 40px;
+  --padding-60: 60px;
+  --padding-80: 80px;
+  --padding-86: 86px;
+
+  /* BorderRadius */
+  --br-4: 4px;
+  --br-8: 8px;
+  --br-40: 40px;
+  --br-50: 50%;
+
+  /* Font */
+  --font-inter: Inter, Arial, sans-serif;
+
+  /* FontSize */
+  --fs-16: 16px;
+  --fs-19: 19px;
+  --fs-20: 20px;
+  --fs-22: 22px;
+  --fs-24: 24px;
+  --fs-29: 29px;
+  --fs-32: 32px;
+  --fs-36: 36px;
+  --fs-40: 40px;
+  --fs-43: 43px;
+  --fs-48: 48px;
+  --fs-58: 58px;
+  --fs-64: 64px;
+  --fs-72: 72px;
+
+  /* Borders */
+  --border-1: 2px solid var(--color-white);
+
+  /* Gradients */
+  --gradient-1: linear-gradient(180.69deg, var(--color-white), #a4b9ff);
+  --gradient-2: linear-gradient(180deg, #5056ff, #1e4a6f 51.44%, #030c3f);
+  --gradient-3: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0),
+    var(--color-white)
+  );
+
+  /* WidthHeights */
+  --height-44: 44px;
+  --height-46: 46px;
+  --height-48: 48px;
+  --height-100: 100px;
+  --height-122: 122px;
+  --height-184: 184px;
+  --height-240: 240px;
+  --width-25: 25px;
+  --width-26: 26px;
+  --width-46: 46px;
+  --width-100: 100px;
+  --width-360: 360px;
+  --width-389: 389px;
+  --width-768: 768px;
+  --width-785: 785px;
+  --width-1144: 1144px;
+  --width-1202: 1202px;
+  --width-calc100-64: calc(100% - 64px);
+
+  /* LineHeights */
+  --lh-24: 24px;
+
+  /* LetterSpacings */
+  --ls--0_02: -0.02;
+  --ls-0_02: 0.02;
+
+  --left-0: 0px;
+  --left-2: 2px;
+  --left-32: 32px;
+  --top-0: 0px;
+  --top-1: 1px;
+  --top-62: 62px;
+  --top-calc50-23: calc(50% - 23px);
+}

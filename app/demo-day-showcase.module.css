@@ -1,0 +1,722 @@
+.demoDayShowcase {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 120px var(--padding-0) 0;
+  box-sizing: border-box;
+  isolation: isolate;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.demoDayShowcaseChild,
+.demoDayShowcaseItem {
+  width: 1281px;
+  height: 1077px;
+  position: relative;
+  border: 1px solid var(--color-white);
+  box-sizing: border-box;
+  display: none;
+  max-width: 100%;
+  z-index: 1;
+  flex-shrink: 0;
+}
+.demoDayShowcaseItem {
+  width: 1445px;
+  max-width: 1445px;
+  height: 865px;
+  z-index: 2;
+}
+.problemStatementsParent {
+  align-self: stretch;
+  background-color: var(--color-whitesmoke);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-60) 120px;
+  box-sizing: border-box;
+  gap: 61px;
+  max-width: 100%;
+  z-index: 6;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: var(--fs-72);
+  font-family: var(--font-inter);
+}
+.problemStatements {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  background: var(--gradient-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.frameParent {
+  align-self: stretch;
+  background-color: var(--color-white);
+  overflow: hidden;
+  flex-direction: column;
+  padding: var(--padding-28);
+  box-sizing: border-box;
+  gap: var(--gap-22);
+  text-align: left;
+  font-size: var(--fs-40);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+.frameContainer,
+.frameGroup,
+.frameParent {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.frameGroup {
+  width: var(--width-1144);
+  justify-content: space-between;
+  gap: var(--gap-20);
+}
+.frameContainer {
+  gap: var(--gap-27);
+}
+.wrapper {
+  width: 48px;
+  background-color: var(--color-gray-100);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-0) 15px;
+  box-sizing: border-box;
+}
+.h2 {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+}
+.studentCareerRoadmapPlatforWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-4) var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+  max-width: 100%;
+  font-size: var(--fs-36);
+  color: var(--color-black);
+}
+.studentCareerRoadmap {
+  margin: 0;
+  width: 568px;
+  height: var(--height-44);
+  position: relative;
+  font-size: inherit;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  font-family: inherit;
+  display: inline-block;
+}
+.frameWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-12) var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+  max-width: 100%;
+  font-size: var(--fs-16);
+}
+.beginnerWrapper,
+.frameDiv {
+  display: flex;
+  align-items: center;
+}
+.frameDiv {
+  justify-content: flex-end;
+  gap: var(--gap-20);
+}
+.beginnerWrapper {
+  background-color: var(--color-royalblue-100);
+  overflow: hidden;
+  justify-content: center;
+  padding: var(--padding-2) var(--padding-20);
+}
+.beginner {
+  position: relative;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+.advancedWrapper,
+.intermediateWrapper {
+  background-color: var(--color-mediumslateblue-100);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-2) var(--padding-20);
+}
+.advancedWrapper {
+  background-color: var(--color-navy);
+}
+.frameParent2,
+.frameWrapper2 {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.frameParent2 {
+  gap: var(--gap-16);
+  font-size: var(--fs-24);
+  color: var(--color-dimgray);
+}
+.frameWrapper2 {
+  width: var(--width-768);
+  background-color: var(--color-white);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.studentsOftenHaveACareerGParent {
+  height: var(--height-240);
+  width: var(--width-785);
+  position: relative;
+  flex-shrink: 0;
+}
+.studentsOftenHave {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: inherit;
+  letter-spacing: 0.02em;
+  line-height: 126%;
+  font-weight: 400;
+  font-family: inherit;
+  display: inline-block;
+  width: var(--width-768);
+}
+.frameChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--gradient-3);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.ced10721c14ab2Ae94De09d1ebIcon {
+  width: var(--width-360);
+  position: relative;
+  border-radius: var(--br-8);
+  max-height: 100%;
+  object-fit: cover;
+  max-width: 100%;
+}
+.container,
+.frameParent3 {
+  display: flex;
+  align-items: flex-start;
+}
+.frameParent3 {
+  width: var(--width-1144);
+  justify-content: space-between;
+  gap: var(--gap-20);
+  max-width: 100%;
+}
+.container {
+  background-color: var(--color-gray-100);
+  overflow: hidden;
+  padding: var(--padding-0) var(--padding-11) var(--padding-0) var(--padding-12);
+}
+.h22,
+.hackathonPreparationAssistan {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  display: inline-block;
+}
+.h22 {
+  height: var(--height-48);
+  width: var(--width-25);
+  font-weight: 400;
+}
+.hackathonPreparationAssistan {
+  width: 545px;
+  height: var(--height-44);
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+.frameWrapper3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-12) var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.beginnerContainer {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-2) var(--padding-20);
+  background-color: var(--color-royalblue-100);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.beginnerContainer:hover {
+  background-color: var(--color-royalblue-300);
+}
+.beginner2 {
+  position: relative;
+  font-size: var(--fs-16);
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  color: var(--color-white);
+  text-align: left;
+}
+.advancedContainer,
+.intermediateContainer {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-2) var(--padding-20);
+  background-color: var(--color-mediumslateblue-100);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intermediateContainer:hover {
+  background-color: var(--color-royalblue-200);
+}
+.advancedContainer {
+  background-color: var(--color-navy);
+}
+.advancedContainer:hover {
+  background-color: var(--color-slateblue);
+}
+.manyStudentsParticipateInHParent {
+  height: var(--height-240);
+  width: 787px;
+  position: relative;
+  flex-shrink: 0;
+}
+.manyStudentsParticipate {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: inherit;
+  letter-spacing: 0.02em;
+  line-height: 126%;
+  font-weight: 400;
+  font-family: inherit;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.frame,
+.frameParent7 {
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+}
+.frameParent7 {
+  align-self: stretch;
+  background-color: var(--color-white);
+  flex-direction: column;
+  padding: var(--padding-28);
+  box-sizing: border-box;
+  gap: var(--gap-22);
+  max-width: 100%;
+  text-align: center;
+  font-size: var(--fs-40);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+.frame {
+  background-color: var(--color-gray-100);
+  padding: var(--padding-0) var(--padding-11);
+}
+.h23 {
+  margin: 0;
+  height: var(--height-48);
+  width: var(--width-26);
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  display: inline-block;
+}
+.aiResumePortfolioOptimiseWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-4) var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--fs-36);
+  color: var(--color-black);
+}
+.aiResume {
+  margin: 0;
+  width: 528px;
+  height: var(--height-44);
+  position: relative;
+  font-size: inherit;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  font-family: inherit;
+  display: inline-block;
+}
+.frameParent11 {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gap-16);
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--fs-24);
+  color: var(--color-dimgray);
+}
+.frameParent13 {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--gap-27);
+  max-width: 100%;
+}
+.studentInnovationCommunityPParent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 100%;
+  font-size: var(--fs-36);
+  color: var(--color-black);
+}
+.studentInnovationCommunity {
+  margin: 0;
+  height: var(--height-44);
+  width: 663px;
+  position: relative;
+  font-size: inherit;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+}
+.frameWrapper7 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-8) var(--padding-0) var(--padding-0);
+  box-sizing: border-box;
+  max-width: 100%;
+  font-size: var(--fs-16);
+  color: var(--color-white);
+}
+.skillVerificationPlatform,
+.studentsFrequentlyStruggle {
+  margin: 0;
+  font-size: inherit;
+  font-family: inherit;
+  display: inline-block;
+}
+.studentsFrequentlyStruggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: 0.02em;
+  line-height: 126%;
+  font-weight: 400;
+  width: 770px;
+}
+.skillVerificationPlatform {
+  width: 413px;
+  height: var(--height-44);
+  position: relative;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+.frameParent22,
+.frameParent23 {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.frameParent22 {
+  gap: 73px;
+}
+.frameParent23 {
+  gap: var(--gap-27);
+}
+.web3Learning {
+  margin: 0;
+  width: 600px;
+  height: var(--height-44);
+  position: relative;
+  font-size: inherit;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  font-family: inherit;
+  display: inline-block;
+}
+.wrapper5 {
+  background-color: var(--color-gray-100);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-12) var(--padding-0) 13px;
+}
+.aiStudy,
+.collegeInnovationDashboard,
+.h27,
+.internshipMatchingPlatform {
+  margin: 0;
+  height: var(--height-48);
+  width: 23px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  display: inline-block;
+}
+.aiStudy,
+.collegeInnovationDashboard,
+.internshipMatchingPlatform {
+  width: 498px;
+  height: var(--height-44);
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+.aiStudy,
+.internshipMatchingPlatform {
+  width: 464px;
+}
+.internshipMatchingPlatform {
+  width: 480px;
+}
+.wrapper8 {
+  background-color: var(--color-gray-100);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-2);
+}
+.h210 {
+  margin: 0;
+  height: var(--height-48);
+  width: 44px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  display: inline-block;
+}
+.lenientTreeOpenInnovationCParent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 100%;
+  font-size: var(--fs-36);
+  color: var(--color-black);
+}
+.lenientTreeOpen {
+  margin: 0;
+  height: var(--height-44);
+  width: 661px;
+  position: relative;
+  font-size: inherit;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+}
+@media screen and (max-width: 1350px) {
+  .problemStatementsParent {
+    padding-top: var(--padding-25);
+    padding-bottom: var(--padding-25);
+    box-sizing: border-box;
+  }
+  .frameParent {
+    height: auto;
+  }
+  .frameGroup {
+    justify-content: center;
+  }
+  .frameGroup,
+  .frameParent2 {
+    flex-wrap: wrap;
+  }
+  .ced10721c14ab2Ae94De09d1ebIcon,
+  .frameWrapper2 {
+    flex: 1;
+  }
+  .frameParent3 {
+    flex-wrap: wrap;
+  }
+  .frameParent7 {
+    height: auto;
+  }
+  .frameParent11,
+  .frameParent13,
+  .frameParent22,
+  .lenientTreeOpenInnovationCParent,
+  .studentInnovationCommunityPParent {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1125px) {
+  .problemStatementsParent {
+    padding-top: var(--padding-20);
+    padding-bottom: var(--padding-20);
+    box-sizing: border-box;
+  }
+  .frameWrapper2 {
+    min-width: 100%;
+  }
+  .frameParent22 {
+    gap: 36px;
+  }
+  .frameParent23 {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 800px) {
+  .problemStatementsParent {
+    gap: var(--gap-30);
+    padding-left: var(--padding-60);
+    padding-right: var(--padding-60);
+    box-sizing: border-box;
+  }
+  .problemStatements {
+    font-size: var(--fs-58);
+  }
+  .frameContainer {
+    flex-wrap: wrap;
+  }
+  .h2 {
+    font-size: var(--fs-32);
+  }
+  .studentCareerRoadmap {
+    font-size: var(--fs-29);
+  }
+  .frameDiv {
+    flex-wrap: wrap;
+  }
+  .h22 {
+    font-size: var(--fs-32);
+  }
+  .hackathonPreparationAssistan {
+    font-size: var(--fs-29);
+  }
+  .h23 {
+    font-size: var(--fs-32);
+  }
+  .aiResume,
+  .skillVerificationPlatform,
+  .studentInnovationCommunity {
+    font-size: var(--fs-29);
+  }
+  .frameParent22 {
+    gap: 18px;
+  }
+  .web3Learning {
+    font-size: var(--fs-29);
+  }
+  .h27 {
+    font-size: var(--fs-32);
+  }
+  .aiStudy,
+  .collegeInnovationDashboard,
+  .internshipMatchingPlatform {
+    font-size: var(--fs-29);
+  }
+  .h210 {
+    font-size: var(--fs-32);
+  }
+  .lenientTreeOpen {
+    font-size: var(--fs-29);
+  }
+}
+@media screen and (max-width: 450px) {
+  .problemStatementsParent {
+    gap: var(--gap-15);
+    padding-left: var(--padding-20);
+    padding-right: var(--padding-20);
+    box-sizing: border-box;
+  }
+  .problemStatements {
+    font-size: var(--fs-43);
+  }
+  .frameParent {
+    padding-top: var(--padding-20);
+    padding-bottom: var(--padding-20);
+    box-sizing: border-box;
+  }
+  .h2 {
+    font-size: var(--fs-24);
+  }
+  .studentCareerRoadmap {
+    font-size: var(--fs-22);
+  }
+  .studentsOftenHave {
+    font-size: var(--fs-19);
+    line-height: var(--lh-24);
+  }
+  .h22 {
+    font-size: var(--fs-24);
+  }
+  .hackathonPreparationAssistan {
+    font-size: var(--fs-22);
+  }
+  .manyStudentsParticipate {
+    font-size: var(--fs-19);
+    line-height: var(--lh-24);
+  }
+  .frameParent7 {
+    padding-top: var(--padding-20);
+    padding-bottom: var(--padding-20);
+    box-sizing: border-box;
+  }
+  .h23 {
+    font-size: var(--fs-24);
+  }
+  .aiResume,
+  .studentInnovationCommunity {
+    font-size: var(--fs-22);
+  }
+  .studentsFrequentlyStruggle {
+    font-size: var(--fs-19);
+    line-height: var(--lh-24);
+  }
+  .skillVerificationPlatform,
+  .web3Learning {
+    font-size: var(--fs-22);
+  }
+  .h27 {
+    font-size: var(--fs-24);
+  }
+  .aiStudy,
+  .collegeInnovationDashboard,
+  .internshipMatchingPlatform {
+    font-size: var(--fs-22);
+  }
+  .h210 {
+    font-size: var(--fs-24);
+  }
+  .lenientTreeOpen {
+    font-size: var(--fs-22);
+  }
+}
