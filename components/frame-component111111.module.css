@@ -13,6 +13,7 @@
   font-size: var(--fs-72);
   font-family: var(--font-inter);
 }
+
 .faqs {
   margin: 0;
   position: relative;
@@ -24,6 +25,7 @@
   -webkit-text-fill-color: transparent;
   font-size: clamp(2.4rem, 7vw, var(--fs-72));
 }
+
 .component6,
 .component6Parent {
   align-self: stretch;
@@ -31,10 +33,12 @@
   flex-direction: column;
   align-items: flex-start;
 }
+
 .component6Parent {
   width: min(100%, 1500px);
   gap: clamp(1.25rem, 3vw, 3.75rem);
 }
+
 .component6 {
   width: 100%;
   min-height: clamp(122px, 11vw, 184px);
@@ -109,8 +113,7 @@
 .open .answerPanel {
   min-height: clamp(150px, 15vw, 220px);
   max-height: 420px;
-  padding: clamp(1.75rem, 4vw, 3.25rem) clamp(1.5rem, 6vw, 5rem)
-    clamp(5rem, 8vw, 7rem);
+  padding: clamp(1.75rem, 4vw, 3.25rem) clamp(1.5rem, 6vw, 5rem) clamp(5rem, 8vw, 7rem);
   opacity: 1;
   transform: translateY(0);
 }
@@ -118,6 +121,7 @@
 .open::after {
   height: calc(100% - clamp(43px, 5.6vw, 70px));
 }
+
 .sizeOfATeamAllowedParent {
   width: 100%;
   min-height: clamp(76px, 7vw, var(--height-100));
@@ -128,8 +132,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: clamp(1rem, 2.1vw, 1.65rem) clamp(1rem, 2.1vw, 1.65rem)
-    clamp(1rem, 2.2vw, 1.75rem) clamp(1.1rem, 3vw, 2.2rem);
+  padding: clamp(1rem, 2.1vw, 1.65rem) clamp(1rem, 2.1vw, 1.65rem) clamp(1rem, 2.2vw, 1.75rem) clamp(1.1rem, 3vw, 2.2rem);
   position: absolute;
   right: 0;
   bottom: 0;
@@ -140,6 +143,7 @@
   font: inherit;
   text-align: left;
 }
+
 .sizeOfA {
   margin: 0;
   min-width: 0;
@@ -149,12 +153,20 @@
   font-family: inherit;
   overflow-wrap: anywhere;
 }
+
 .unionIcon {
   width: clamp(2rem, 4vw, var(--width-46));
   height: clamp(2rem, 4vw, var(--height-46));
   position: relative;
   flex-shrink: 0;
-  transition: transform 0.2s ease;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.25s ease;
+}
+
+.sizeOfATeamAllowedParent:hover .unionIcon {
+  background: rgba(255, 255, 255, 0.28);
 }
 
 .unionIcon::before,
@@ -163,11 +175,12 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
+  width: 45%;
   height: 3px;
   border-radius: 999px;
   background: var(--color-white);
   transform: translate(-50%, -50%);
+  transition: background-color 0.25s ease;
 }
 
 .unionIcon::after {
@@ -176,7 +189,14 @@
 
 .open .unionIcon {
   transform: rotate(45deg);
+  background: var(--color-white);
 }
+
+.open .unionIcon::before,
+.open .unionIcon::after {
+  background: var(--color-mediumslateblue-300);
+}
+
 @media screen and (max-width: 1350px) {
   .faqsParent {
     padding-top: 39px;
@@ -184,6 +204,7 @@
     box-sizing: border-box;
   }
 }
+
 @media screen and (max-width: 1125px) {
   .faqsParent {
     padding-top: var(--padding-25);
@@ -191,6 +212,7 @@
     box-sizing: border-box;
   }
 }
+
 @media screen and (max-width: 800px) {
   .faqsParent {
     gap: var(--gap-30);
@@ -199,12 +221,14 @@
     box-sizing: border-box;
   }
 }
+
 @media screen and (max-width: 450px) {
   .faqsParent {
     gap: var(--gap-15);
     padding: var(--padding-20);
     box-sizing: border-box;
   }
+
   .component6 {
     min-height: 126px;
     padding-top: 56px;
