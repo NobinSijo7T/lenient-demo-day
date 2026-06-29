@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import styles from "./frame-component1111.module.css";
+import { AnimatedHeading } from "./ui/animated-heading";
 
 export type FrameComponent1111Type = {
   className?: string;
@@ -13,9 +14,9 @@ const FrameComponent1111: NextPage<FrameComponent1111Type> = ({
     <section className={[styles.demoDayShowcaseInner, className].join(" ")}>
       <div className={styles.frameParent}>
         <section className={styles.introducingParent}>
-          <h2 className={styles.introducing}>Introducing</h2>
+          <AnimatedHeading as="h2" className={styles.introducing}>Introducing</AnimatedHeading>
           <div className={styles.demoDayParent}>
-            <h1 className={styles.demoDay}>DEMO DAY</h1>
+            <AnimatedHeading as="h1" className={styles.demoDay}>DEMO DAY</AnimatedHeading>
             <h3 className={styles.loremIpsumEvent}>
               Lorem Ipsum Event new for student grow and learn. Lorem Ipsum
               Event new for student grow and learn.

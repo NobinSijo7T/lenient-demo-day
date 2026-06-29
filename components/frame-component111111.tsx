@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { NextPage } from "next";
 import styles from "./frame-component111111.module.css";
+import { AnimatedHeading } from "./ui/animated-heading";
 
 export type FrameComponent111111Type = {
   className?: string;
@@ -43,7 +44,7 @@ const FrameComponent111111: NextPage<FrameComponent111111Type> = ({
 
   return (
     <section className={[styles.faqsParent, className].join(" ")} id="faqs">
-      <h2 className={styles.faqs}>FAQs</h2>
+      <AnimatedHeading as="h2" className={styles.faqs}>FAQs</AnimatedHeading>
       <div className={styles.component6Parent}>
         {faqs.map((faq, index) => {
           const isOpen = openIndex === index;

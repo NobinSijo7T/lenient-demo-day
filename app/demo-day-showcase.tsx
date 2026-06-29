@@ -1,20 +1,55 @@
+"use client";
+
 import type { NextPage } from "next";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Hero from "../components/hero";
 import FrameComponent11111 from "../components/frame-component11111";
 import FrameComponent111111 from "../components/frame-component111111";
 import styles from "./demo-day-showcase.module.css";
+import { AnimatedHeading } from "../components/ui/animated-heading";
+import BarLoader from "../components/ui/bar-loader";
 
 const DemoDayShowcase: NextPage = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Lock scroll
+    document.body.style.overflow = "hidden";
+    const timer = setTimeout(() => {
+      setLoading(false);
+      document.body.style.overflow = "unset";
+    }, 2200); // Wait 2.2 seconds
+    return () => {
+      clearTimeout(timer);
+      document.body.style.overflow = "unset";
+    };
+  }, []);
+
   return (
-    <div className={styles.demoDayShowcase} id="home">
-      <Navbar />
-      <Hero />
+    <>
+      <AnimatePresence mode="wait">
+        {loading ? (
+          <motion.div
+            key="loader"
+            className="fixed inset-0 z-[9999]"
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+          >
+            <BarLoader />
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
+      <div className={styles.demoDayShowcase} id="home">
+        <Navbar />
+        <Hero />
       <FrameComponent11111 />
       <main className={styles.problemStatementsParent} id="problems">
-        <h2 className={styles.problemStatements}>Problem Statements</h2>
+        <AnimatedHeading as="h2" className={styles.problemStatements}>Problem Statements</AnimatedHeading>
         <section className={styles.frameParent}>
           <div className={styles.frameGroup}>
             <div className={styles.frameContainer}>
@@ -551,6 +586,7 @@ const DemoDayShowcase: NextPage = () => {
       <FrameComponent111111 />
       <Footer />
     </div>
+    </>
   );
 };
 

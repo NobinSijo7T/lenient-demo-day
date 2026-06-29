@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import styles from "./hero.module.css";
+import { AnimatedHeading } from "./ui/animated-heading";
 
 const Hero: NextPage = () => {
   return (
@@ -8,7 +9,7 @@ const Hero: NextPage = () => {
       <main className={styles.frame}>
         <div className={styles.frameChild} />
         <main className={styles.frame2}>
-          <h1 className={styles.demoDay}>DEMO DAY</h1>
+          <AnimatedHeading as="h1" className={styles.demoDay}>DEMO DAY</AnimatedHeading>
           <section className={styles.statsRow}>
             <div className={styles.statEvents}>
               <h2 className={styles.h2}>50+</h2>
@@ -23,7 +24,7 @@ const Hero: NextPage = () => {
           </section>
         </main>
       </main>
-      <h2 className={styles.introducing}>Introducing</h2>
+      <AnimatedHeading as="h2" className={styles.introducing}>Introducing</AnimatedHeading>
       <div className={styles.loremIpsumEvent}>
         Lorem Ipsum Event new for student grow and learn. Lorem Ipsum Event new
         for student grow and learn.

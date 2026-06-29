@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import SharedTooltipAvatars from "./ui/shared-tooltip-avatars";
 import styles from "./frame-component11111.module.css";
+import { AnimatedHeading } from "./ui/animated-heading";
 
 export type FrameComponent11111Type = {
   className?: string;
@@ -61,7 +62,7 @@ const FrameComponent11111: NextPage<FrameComponent11111Type> = ({
     >
       <div className={styles.frameParent}>
         <div className={styles.readyToDiveIntoRealTimePWrapper}>
-          <h1 className={styles.readyToDiveContainer}>
+          <AnimatedHeading as="h1" className={styles.readyToDiveContainer}>
             <span className={styles.readyTo}>Ready to</span>
             <span>{` `}</span>
             <span className={styles.readyTo}>dive</span>
@@ -71,7 +72,7 @@ const FrameComponent11111: NextPage<FrameComponent11111Type> = ({
             </span>
             <span>{` `}</span>
             <span className={styles.itsYourLucky}>It’s your Lucky Day !!!</span>
-          </h1>
+          </AnimatedHeading>
         </div>
         <section className={styles.frameWrapper}>
           <div className={styles.frameGroup}>
