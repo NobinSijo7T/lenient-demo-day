@@ -3,6 +3,8 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 import CornerButton from "./ui/corner-button";
 import styles from "./navbar.module.css";
 
@@ -11,6 +13,7 @@ export type NavbarType = {
 };
 
 const Navbar: NextPage<NavbarType> = ({ className = "" }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navItems = [
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
@@ -28,7 +31,11 @@ const Navbar: NextPage<NavbarType> = ({ className = "" }) => {
   };
 
   return (
-    <nav className={[styles.navbar, className].join(" ")}>
+    <nav
+      className={[styles.navbar, isMenuOpen ? styles.menuOpen : "", className]
+        .filter(Boolean)
+        .join(" ")}
+    >
       <div className={styles.navContent}>
         <Link href="/" className={styles.logo}>
           <Image
@@ -40,10 +47,29 @@ const Navbar: NextPage<NavbarType> = ({ className = "" }) => {
           />
           <span className={styles.logoText}>LENIENT TREE</span>
         </Link>
+        <button
+          className={styles.menuButton}
+          type="button"
+          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isMenuOpen}
+          aria-controls="primary-navigation"
+          onClick={() => setIsMenuOpen((open) => !open)}
+        >
+          {isMenuOpen ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
+        </button>
         <div className={styles.navActions}>
-          <div className={styles.navLinks} aria-label="Page sections">
+          <div
+            className={styles.navLinks}
+            id="primary-navigation"
+            aria-label="Page sections"
+          >
             {navItems.map((item) => (
-              <a className={styles.navLink} href={item.href} key={item.href}>
+              <a
+                className={styles.navLink}
+                href={item.href}
+                key={item.href}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 {item.label}
               </a>
             ))}

@@ -96,7 +96,7 @@
   font-size: clamp(1rem, 2vw, 1.5rem);
   font-weight: 300;
   font-family: var(--font-inter);
-  color: var(--color-gray-200);
+  color: #ffffff;
   text-align: left;
 }
 

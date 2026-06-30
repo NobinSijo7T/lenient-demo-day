@@ -216,16 +216,55 @@
 }
 
 @media screen and (max-width: 825px) {
+  .frameParent {
+    min-height: 100svh;
+    align-items: stretch;
+    overflow: hidden;
+    padding: 118px 18px 72px;
+    background-image: url(/Frame@3x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
   .frame {
+    height: auto;
+    min-height: 0;
     max-width: 100%;
+    background: none;
+  }
+
+  .frameChild {
+    display: none;
   }
 
   .frame2 {
-    gap: 94px;
+    position: relative;
+    top: auto;
+    left: auto;
+    border: 0;
+    padding: 64px 0 24px;
+    gap: 32px;
+    align-items: flex-start;
+    font-size: clamp(58px, 17vw, 112px);
   }
 
   .demoDay {
-    font-size: 64px;
+    max-width: 680px;
+    font-size: inherit;
+    line-height: 0.92;
+    overflow-wrap: anywhere;
+  }
+
+  .statsRow {
+    max-width: 560px;
+    gap: 20px;
+    font-size: 40px;
+  }
+
+  .statEvents,
+  .statRegistrations {
+    min-width: min(100%, 220px);
   }
 
   .statEvents {
@@ -237,21 +276,53 @@
   }
 
   .introducing {
+    position: relative;
+    top: auto;
+    left: auto;
     font-size: 27px;
+    z-index: 2;
+  }
+
+  .loremIpsumEvent {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: min(100%, 620px);
+    font-size: 21px;
+    line-height: 1.45;
+    z-index: 2;
+  }
+
+  .chatgptImageJun24202604Icon {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: min(78vw, 340px);
+    height: auto;
+    align-self: center;
+    object-fit: contain;
+  }
+
+  .mergedAsset1Icon,
+  .frame3 {
+    display: none;
   }
 }
 
 @media screen and (max-width: 450px) {
-  .frame {
-    max-width: 100%;
+  .frameParent {
+    padding: 100px 16px 56px;
   }
 
   .frame2 {
-    gap: 47px;
+    padding-top: 52px;
+    gap: 26px;
+    font-size: clamp(46px, 18vw, 72px);
   }
 
-  .demoDay {
-    font-size: 40px;
+  .statsRow {
+    gap: 16px;
+    font-size: 34px;
   }
 
   .h2 {
@@ -267,6 +338,6 @@
   }
 
   .loremIpsumEvent {
-    font-size: 19px;
+    font-size: 17px;
   }
 }
