@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import type { NextPage } from "next";
 import styles from "./legal-modal.module.css";
 
@@ -18,6 +19,12 @@ const LegalModal: NextPage<LegalModalProps> = ({
   content,
 }) => {
   const [isAnimating, setIsAnimating] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    return () => setMounted(false);
+  }, []);
 
   useEffect(() => {
     if (isOpen) {
@@ -45,9 +52,9 @@ const LegalModal: NextPage<LegalModalProps> = ({
     }
   };
 
-  if (!isOpen) return null;
+  if (!isOpen || !mounted) return null;
 
-  return (
+  const modalContent = (
     <div
       className={`${styles.modalOverlay} ${isAnimating ? styles.fadeIn : styles.fadeOut}`}
       onClick={handleBackdropClick}
@@ -117,6 +124,8 @@ const LegalModal: NextPage<LegalModalProps> = ({
       </div>
     </div>
   );
+
+  return createPortal(modalContent, document.body);
 };
 
 export default LegalModal;

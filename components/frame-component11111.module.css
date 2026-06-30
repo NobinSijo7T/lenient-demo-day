@@ -1,7 +1,7 @@
 .demoDayShowcaseInner {
   align-self: stretch;
   justify-content: flex-end;
-  padding: 0 clamp(1.25rem, 4vw, 50px) var(--padding-80);
+  padding: clamp(4.5rem, 8vw, 7.5rem) clamp(1.25rem, 4vw, 50px) var(--padding-80);
   box-sizing: border-box;
   flex-shrink: 0;
   text-align: left;
@@ -152,6 +152,7 @@
 }
 @media screen and (max-width: 800px) {
   .demoDayShowcaseInner {
+    padding-top: 72px;
     padding-left: var(--padding-25);
     padding-right: var(--padding-25);
     padding-bottom: 52px;
