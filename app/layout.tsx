@@ -3,6 +3,7 @@ import "./global.css";
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import SmoothScroll from "../components/smooth-scroll";
+import PageLoader from "../components/page-loader";
 
 export const metadata: Metadata = {
   title: "Lenient Tree - Demo Day Showcase",
@@ -35,6 +36,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#667eea" />
       </head>
       <body suppressHydrationWarning>
+        <PageLoader />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

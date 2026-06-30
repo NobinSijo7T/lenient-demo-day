@@ -1,11 +1,22 @@
+"use client";
+
+import { useState } from "react";
 import type { NextPage } from "next";
 import styles from "./footer.module.css";
+import LegalModal from "./legal-modal";
+
+// Import JSON data
+import privacyPolicyData from "../Privacy_Policy_Lenient_Tree.json";
+import termsData from "../Terms_and_Conditions_Lenient_Tree.json";
 
 export type FooterType = {
   className?: string;
 };
 
 const Footer: NextPage<FooterType> = ({ className = "" }) => {
+  const [showPrivacyModal, setShowPrivacyModal] = useState(false);
+  const [showTermsModal, setShowTermsModal] = useState(false);
+
   const socialLinks = [
     {
       platform: "Instagram",
@@ -36,11 +47,20 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
     },
   ];
 
-  const quickLinks = [
-    { label: "How to participate?", href: "#about" },
-    { label: "Timeline", href: "#timeline" },
-    { label: "Guidelines", href: "#guidelines" },
-    { label: "Rules & Regulations", href: "#faqs" },
+  const quickLinks: Array<
+    | { label: string; href: string; onClick?: never }
+    | { label: string; onClick: () => void; href?: never }
+  > = [
+    { label: "FAQ", href: "#faq" },
+    { label: "Problem Statement", href: "#problem-statement" },
+    { 
+      label: "Privacy Policy", 
+      onClick: () => setShowPrivacyModal(true)
+    },
+    { 
+      label: "Terms & Conditions", 
+      onClick: () => setShowTermsModal(true)
+    },
   ];
 
   return (
@@ -61,11 +81,24 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
         <div className={styles.column}>
           <div className={styles.columnHeader}>Quick Links</div>
           <div className={styles.linkList}>
-            {quickLinks.map((link) => (
-              <a key={link.label} href={link.href} className={styles.link}>
-                {link.label}
-              </a>
-            ))}
+            {quickLinks.map((link) => {
+              if (link.onClick) {
+                return (
+                  <button
+                    key={link.label}
+                    onClick={link.onClick}
+                    className={styles.link}
+                  >
+                    {link.label}
+                  </button>
+                );
+              }
+              return (
+                <a key={link.label} href={link.href} className={styles.link}>
+                  {link.label}
+                </a>
+              );
+            })}
           </div>
         </div>
 
@@ -93,6 +126,20 @@ const Footer: NextPage<FooterType> = ({ className = "" }) => {
       <div className={styles.footerBottom}>
         <p className={styles.madeWith}>Made with ❤️ from Lenient Tree</p>
       </div>
+
+      {/* Legal Modals */}
+      <LegalModal
+        isOpen={showPrivacyModal}
+        onClose={() => setShowPrivacyModal(false)}
+        title={privacyPolicyData.title}
+        content={privacyPolicyData.content}
+      />
+      <LegalModal
+        isOpen={showTermsModal}
+        onClose={() => setShowTermsModal(false)}
+        title={termsData.title}
+        content={termsData.content}
+      />
     </footer>
   );
 };

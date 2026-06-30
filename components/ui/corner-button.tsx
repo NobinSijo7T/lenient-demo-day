@@ -122,7 +122,7 @@ export function CornerButton({
           background-color: var(--accent);
           background-image: linear-gradient(#0000, #0004);
           border: none;
-          color: #0008;
+          color: #ffffff;
           font-family: "Inter", sans-serif;
           font-size: 1rem;
           font-weight: 600;
@@ -140,15 +140,18 @@ export function CornerButton({
             background-color 0.2s ease-in-out,
             transform 0.2s ease-in-out,
             box-shadow 0.2s ease-in-out,
-            border-radius 0.3s ease-in-out;
+            border-radius 0.3s ease-in-out,
+            color 0.2s ease-in-out;
         }
         .corner-btn:hover {
           background-color: #fff;
+          color: #0b1a51;
           transform: scale(1.05);
           border-radius: 10% / 200%;
         }
         .corner-btn:active {
           background-color: var(--accent);
+          color: #ffffff;
           transform: scale(0.98);
           border-radius: 20% / 200%;
         }

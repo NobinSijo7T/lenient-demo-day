@@ -1,0 +1,251 @@
+/* ── Loader Container ──────────────────────────────────────────────── */
+.loaderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0a1f6e 0%, #1a3aad 45%, #1e4a9f 70%, #030c3f 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.loaderContainer.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ── Animated Background Grid ─────────────────────────────────────── */
+.gridBackground {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0.15;
+}
+
+.gridLine {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.gridLine.horizontal {
+  width: 100%;
+  height: 1px;
+  left: 0;
+  animation: slideRight 3s ease-in-out infinite;
+}
+
+.gridLine.vertical {
+  width: 1px;
+  height: 100%;
+  top: 0;
+  animation: slideDown 3s ease-in-out infinite;
+}
+
+@keyframes slideRight {
+  0%, 100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideDown {
+  0%, 100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* ── Logo/Brand ────────────────────────────────────────────────────── */
+.loaderBrand {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 40px;
+}
+
+.brandText {
+  font-family: "Orbitron", "Inter", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  letter-spacing: 0.05em;
+  animation: fadeInScale 1s ease-out;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ── Spinner Animation ─────────────────────────────────────────────── */
+.spinnerContainer {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 30px;
+}
+
+.spinner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid transparent;
+}
+
+.spinner:nth-child(1) {
+  border-top-color: #ffffff;
+  border-right-color: #ffffff;
+  animation: spin 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+
+.spinner:nth-child(2) {
+  border-bottom-color: rgba(255, 255, 255, 0.6);
+  border-left-color: rgba(255, 255, 255, 0.6);
+  animation: spin 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite reverse;
+}
+
+.spinner:nth-child(3) {
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  border-top-color: rgba(255, 255, 255, 0.4);
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Loading Dots ──────────────────────────────────────────────────── */
+.loadingText {
+  font-family: "Poppins", "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  animation: dotPulse 1.4s ease-in-out infinite;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes dotPulse {
+  0%, 60%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* ── Progress Bar ──────────────────────────────────────────────────── */
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+  animation: progressSlide 2s ease-in-out infinite;
+}
+
+@keyframes progressSlide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ── Responsive Design ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .brandText {
+    font-size: 36px;
+  }
+
+  .spinnerContainer {
+    width: 100px;
+    height: 100px;
+  }
+
+  .loadingText {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brandText {
+    font-size: 28px;
+  }
+
+  .spinnerContainer {
+    width: 80px;
+    height: 80px;
+  }
+
+  .loadingText {
+    font-size: 14px;
+  }
+}
