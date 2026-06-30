@@ -313,11 +313,11 @@
   }
 
   .chatgptImageJun24202604Icon {
-    width: clamp(310px, 24vw, 430px);
+    width: clamp(300px, 23vw, 430px);
     height: auto;
     top: auto;
-    right: clamp(64px, 8vw, 170px);
-    bottom: clamp(-42px, -3vw, -24px);
+    right: clamp(72px, 9.2vw, 176px);
+    bottom: clamp(-15px, -3.2vw, -28px);
     object-fit: contain;
   }
 
