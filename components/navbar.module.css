@@ -12,8 +12,12 @@
   box-sizing: border-box;
   padding: 12px 32px;
   background: transparent;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  animation: slideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: 
+    all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out,
+    border 0.5s ease-in-out;
+  animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Scrolled state - with background */
@@ -28,6 +32,7 @@
     0 6px 32px rgba(0, 0, 0, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.06);
+  animation: navbarExpand 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .navbar.scrolled .registerCornerButton {
@@ -39,11 +44,25 @@
 
 @keyframes slideDown {
   from {
-    transform: translate(-50%, -150%);
+    transform: translate(-50%, -120%);
     opacity: 0;
   }
   to {
     transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes navbarExpand {
+  0% {
+    transform: translate(-50%, 0) scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-50%, 0) scale(1.02);
+  }
+  100% {
+    transform: translate(-50%, 0) scale(1);
     opacity: 1;
   }
 }
@@ -72,11 +91,28 @@
 .logoIcon {
   object-fit: contain;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 
+    all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+    filter 0.4s ease;
 }
 
 .navbar.scrolled .logoIcon {
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
+  animation: logoShrink 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes logoShrink {
+  0% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .navActions {
@@ -90,7 +126,7 @@
   --padding: 0.45rem 0.55rem;
   --dot-color: rgba(0, 0, 0, 0.92);
   --line-color: rgba(0, 0, 0, 0.72);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .navbar.scrolled .registerCornerWrapper {
@@ -107,7 +143,10 @@
     0 0 0 1px rgba(0, 0, 0, 0.1),
     0 4px 16px rgba(0, 0, 0, 0.08);
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: 
+    all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.4s ease,
+    color 0.4s ease;
 }
 
 .navbar.scrolled .registerCornerButton {
@@ -116,13 +155,28 @@
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.4),
     0 8px 24px rgba(31, 76, 224, 0.4);
+  animation: buttonPulse 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .registerCornerButton:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px) scale(1.02);
   box-shadow:
     0 0 0 1px rgba(0, 0, 0, 0.15),
     0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+@keyframes buttonPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 760px) {
