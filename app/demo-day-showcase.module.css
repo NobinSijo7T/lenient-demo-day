@@ -791,6 +791,7 @@
   .frameParent,
   .frameParent7 {
     padding: clamp(1rem, 5vw, var(--padding-28));
+    gap: 1.5rem;
   }
 
   .frameGroup,
@@ -804,11 +805,78 @@
   .studentInnovationCommunityPParent {
     align-items: flex-start;
     flex-direction: column;
+    width: 100%;
+  }
+
+  .frameContainer {
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .wrapper,
+  .container,
+  .frame,
+  .wrapper5,
+  .wrapper8 {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .h2,
+  .h22,
+  .h23,
+  .h27,
+  .h210 {
+    font-size: 1.5rem;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .studentCareerRoadmapPlatforWrapper,
+  .aiResumePortfolioOptimiseWrapper {
+    padding: 0;
+    width: 100%;
+  }
+
+  .studentCareerRoadmap,
+  .hackathonPreparationAssistan,
+  .aiResume,
+  .skillVerificationPlatform,
+  .web3Learning,
+  .collegeInnovationDashboard,
+  .aiStudy,
+  .internshipMatchingPlatform {
+    width: 100%;
+    text-align: left;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .studentInnovationCommunity,
+  .lenientTreeOpen {
+    width: 100%;
+    text-align: left;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .frameWrapper,
+  .frameWrapper3,
+  .frameWrapper7 {
+    padding: 0.5rem 0 0 0;
+    width: 100%;
   }
 
   .frameDiv {
     justify-content: flex-start;
     gap: 0.5rem;
+    width: 100%;
+    flex-wrap: wrap;
   }
 
   .beginnerWrapper,
@@ -817,19 +885,39 @@
   .beginnerContainer,
   .intermediateContainer,
   .advancedContainer {
-    padding: 0.35rem 0.75rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .beginner,
+  .beginner2 {
+    white-space: nowrap;
+  }
+
+  .frameParent2,
+  .frameParent11 {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .frameWrapper2 {
+    width: 100%;
+    flex: none;
   }
 
   .studentsOftenHaveACareerGParent,
   .manyStudentsParticipateInHParent {
     min-height: 0;
+    width: 100%;
   }
 
   .studentsOftenHave,
   .manyStudentsParticipate,
   .studentsFrequentlyStruggle {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    width: 100%;
   }
 
   .frameChild {
@@ -838,7 +926,9 @@
 
   .ced10721c14ab2Ae94De09d1ebIcon {
     width: 100%;
+    height: auto;
     aspect-ratio: 3 / 2;
     max-height: none;
+    flex: none;
   }
 }

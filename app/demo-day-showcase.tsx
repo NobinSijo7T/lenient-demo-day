@@ -15,8 +15,10 @@ import BarLoader from "../components/ui/bar-loader";
 
 const DemoDayShowcase: NextPage = () => {
   const [loading, setLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     // Lock scroll
     document.body.style.overflow = "hidden";
     const timer = setTimeout(() => {
@@ -29,10 +31,14 @@ const DemoDayShowcase: NextPage = () => {
     };
   }, []);
 
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <>
-      <AnimatePresence mode="wait">
-        {loading ? (
+      <AnimatePresence mode="wait" onExitComplete={() => {}}>
+        {loading && (
           <motion.div
             key="loader"
             className="fixed inset-0 z-[9999]"
@@ -42,7 +48,7 @@ const DemoDayShowcase: NextPage = () => {
           >
             <BarLoader />
           </motion.div>
-        ) : null}
+        )}
       </AnimatePresence>
       <div className={styles.demoDayShowcase} id="home">
         <Navbar />
