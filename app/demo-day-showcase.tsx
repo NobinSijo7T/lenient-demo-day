@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "../components/navbar";
-import Footer from "../components/footer";
+import Footer from "../components/footer/app/frame209";
 import Hero from "../components/hero";
 import FrameComponent11111 from "../components/frame-component11111";
 import FrameComponent111111 from "../components/frame-component111111";

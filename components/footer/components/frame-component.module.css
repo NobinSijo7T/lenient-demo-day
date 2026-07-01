@@ -1,0 +1,169 @@
+.frameParent,
+.lenientTree2025AllRightsParent {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.frameParent {
+  align-self: stretch;
+  background-color: var(--color-gray);
+  overflow: hidden;
+  flex-direction: column;
+  padding: var(--padding-18) var(--padding-32) var(--padding-18)
+    var(--padding-30);
+  gap: var(--gap-19);
+  max-width: 100%;
+  width: 100%;
+  text-align: left;
+  font-size: var(--fs-16);
+  color: var(--color-gainsboro-200);
+  font-family: var(--font-inter);
+}
+
+.lenientTree2025AllRightsParent {
+  width: 100%;
+  justify-content: space-between;
+  padding: var(--padding-36) var(--padding-1) var(--padding-36) var(--padding-0);
+  gap: var(--gap-20);
+  max-width: 1241.6px;
+  margin: 0 auto;
+}
+
+.privacyPolicyParent {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 19.5px;
+  min-width: 274px;
+  max-width: 100%;
+  color: var(--color-white);
+  flex-wrap: wrap;
+}
+
+.copyrightText {
+  position: relative;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.legalLink {
+  position: relative;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  padding: 0;
+  text-align: inherit;
+  white-space: nowrap;
+}
+
+.legalLink:hover {
+  color: var(--color-lightblue);
+}
+
+.frameChild {
+  height: var(--height-19);
+  width: var(--width-2);
+  position: relative;
+  background-color: var(--color-gainsboro-200);
+  flex-shrink: 0;
+}
+
+.madeWith {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--fs-14);
+  letter-spacing: 0.02em;
+  color: var(--color-white);
+  text-align: center;
+  padding: 8px 16px;
+}
+
+/* Tablet Responsiveness */
+@media screen and (max-width: 1250px) {
+  .lenientTree2025AllRightsParent {
+    max-width: 100%;
+    padding: 24px 16px;
+  }
+  
+  .frameParent {
+    padding: 16px 24px;
+  }
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 750px) {
+  .frameParent {
+    padding: 16px 20px;
+    gap: 16px;
+  }
+  
+  .lenientTree2025AllRightsParent {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 16px;
+    text-align: center;
+  }
+  
+  .copyrightText {
+    white-space: normal;
+  }
+  
+  .privacyPolicyParent {
+    justify-content: center;
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .legalLink {
+    font-size: 14px;
+    white-space: normal;
+  }
+  
+  .madeWith {
+    font-size: 12px;
+  }
+}
+
+/* Small Mobile Responsiveness */
+@media screen and (max-width: 480px) {
+  .frameParent {
+    padding: 12px 16px;
+  }
+  
+  .lenientTree2025AllRightsParent {
+    padding: 16px 12px;
+    gap: 12px;
+  }
+  
+  .privacyPolicyParent {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  
+  .frameChild {
+    display: none;
+  }
+  
+  .copyrightText {
+    font-size: 13px;
+    white-space: normal;
+    text-align: center;
+  }
+  
+  .legalLink {
+    font-size: 13px;
+  }
+  
+  .madeWith {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+}

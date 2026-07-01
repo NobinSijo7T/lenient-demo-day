@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Avenir+LT+Std:ital,wght@0,400&display=swap");
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* Common Style Variables */
+
+  /* Color */
+  --color-blue: #1311f6;
+  --color-blueviolet: #4e43ff;
+  --color-gainsboro-100: #e6e6e6;
+  --color-gainsboro-200: #dedede;
+  --color-gray: #0e1532;
+  --color-lightblue: #b6deff;
+  --color-mediumblue: #4745ff;
+  --color-midnightblue: #0d0b3a;
+  --color-white: #fff;
+
+  /* Gap */
+  --gap-0: 0px;
+  --gap-12: 12px;
+  --gap-19: 19px;
+  --gap-20: 20px;
+
+  /* Padding */
+  --padding-0: 0px;
+  --padding-1: 1px;
+  --padding-10: 10px;
+  --padding-12: 12px;
+  --padding-18: 18px;
+  --padding-20: 20px;
+  --padding-30: 30px;
+  --padding-32: 32px;
+  --padding-36: 36px;
+  --padding-40: 40px;
+
+  /* Font */
+  --font-avenir-lt-std: Avenir LT Std, Arial, sans-serif;
+  --font-inter: Inter, Arial, sans-serif;
+
+  /* FontSize */
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-24: 24px;
+  --fs-28: 28px;
+  --fs-48: 48px;
+
+  /* WidthHeights */
+  --height-2: 2px;
+  --height-19: 19px;
+  --height-28: 28px;
+  --height-48: 48px;
+  --width-2: 2px;
+  --width-28: 28px;
+  --width-48: 48px;
+
+  --left-1: 1px;
+}

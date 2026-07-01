@@ -1,0 +1,249 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 44px var(--padding-12) 44px 101px;
+  box-sizing: border-box;
+  gap: var(--gap-20);
+  max-width: 1200px;
+  width: 100%;
+  text-align: left;
+  font-size: var(--fs-48);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+
+.becomeAPartner {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+  line-height: 1.2;
+}
+
+.becomeAPart {
+  position: relative;
+  font-size: var(--fs-24);
+  color: var(--color-lightblue);
+  max-width: 100%;
+  line-height: 1.5;
+}
+
+.contactUsParent {
+  cursor: pointer;
+  border: 2px solid var(--color-blue);
+  padding: var(--padding-10) var(--padding-30) var(--padding-10)
+    var(--padding-40);
+  background-color: var(--color-white);
+  width: 241.3px;
+  max-width: 100%;
+  height: 53px;
+  border-radius: 31px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-12);
+  top: 0;
+  z-index: 99;
+  position: sticky;
+  transition: all 0.3s ease;
+}
+
+.contactUsParent:hover {
+  background-color: var(--color-gainsboro-100);
+  border: 2px solid var(--color-mediumblue);
+  box-sizing: border-box;
+}
+
+.contactUs {
+  position: relative;
+  font-size: var(--fs-24);
+  font-weight: 300;
+  font-family: var(--font-inter);
+  color: var(--color-midnightblue);
+  text-align: left;
+}
+
+.wrapperUnion {
+  height: 28.3px;
+  width: 28.3px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.unionIcon {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 1px;
+  top: 0;
+  transform: scale(1);
+}
+
+.container2 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  text-decoration: none;
+}
+
+.socialLink:hover {
+  transform: translateY(-3px);
+  opacity: 0.8;
+}
+
+.socialIcon {
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-blueviolet);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover .socialIcon {
+  background-color: #7c3aed;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+}
+
+.socialsIcon {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  height: 48px;
+  width: 48px;
+  display: block;
+}
+
+.socials {
+  cursor: pointer;
+  border: 2px solid transparent;
+  padding: 10px;
+  background-color: var(--color-blueviolet);
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.socials:hover {
+  background-color: #7c3aed;
+  transform: translateY(-3px);
+}
+
+.linkedinIcon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-white);
+}
+
+/* Tablet Responsiveness */
+@media screen and (max-width: 1250px) {
+  .container {
+    padding: 44px 50px;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  
+  .becomeAPartner {
+    font-size: 40px;
+  }
+  
+  .becomeAPart {
+    font-size: 20px;
+  }
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 750px) {
+  .container {
+    padding: 32px 25px;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .becomeAPartner {
+    font-size: 32px;
+    text-align: center;
+  }
+  
+  .becomeAPart {
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .contactUsParent {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .contactUs {
+    font-size: 20px;
+  }
+  
+  .container2 {
+    justify-content: center;
+  }
+}
+
+/* Small Mobile Responsiveness */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 24px 20px;
+    gap: 16px;
+  }
+  
+  .becomeAPartner {
+    font-size: 28px;
+  }
+  
+  .becomeAPart {
+    font-size: 16px;
+  }
+  
+  .contactUsParent {
+    height: 48px;
+    padding: 8px 24px;
+  }
+  
+  .contactUs {
+    font-size: 18px;
+  }
+  
+  .socialIcon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .socialIcon svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .container2 {
+    gap: 12px;
+  }
+}
