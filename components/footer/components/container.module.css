@@ -34,129 +34,98 @@
 
 .contactUsParent {
   cursor: pointer;
-  border: 2px solid var(--color-blue);
-  padding: var(--padding-10) var(--padding-30) var(--padding-10)
-    var(--padding-40);
+  border: 3px solid var(--color-blue);
+  padding: 16px 48px;
   background-color: var(--color-white);
-  width: 241.3px;
+  width: auto;
+  min-width: 280px;
   max-width: 100%;
-  height: 53px;
-  border-radius: 31px;
+  height: auto;
+  border-radius: 50px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--gap-12);
-  top: 0;
-  z-index: 99;
-  position: sticky;
+  gap: 16px;
   transition: all 0.3s ease;
 }
 
 .contactUsParent:hover {
   background-color: var(--color-gainsboro-100);
-  border: 2px solid var(--color-mediumblue);
+  border: 3px solid var(--color-mediumblue);
   box-sizing: border-box;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(41, 98, 255, 0.2);
 }
 
 .contactUs {
   position: relative;
-  font-size: var(--fs-24);
-  font-weight: 300;
+  font-size: 24px;
+  font-weight: 400;
   font-family: var(--font-inter);
   color: var(--color-midnightblue);
-  text-align: left;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.arrowIcon {
+  color: var(--color-midnightblue);
+  flex-shrink: 0;
 }
 
 .wrapperUnion {
-  height: 28.3px;
-  width: 28.3px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: none;
 }
 
 .unionIcon {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  position: absolute;
-  left: 1px;
-  top: 0;
-  transform: scale(1);
+  display: none;
 }
 
 .container2 {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .socialLink {
   display: inline-block;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease;
   text-decoration: none;
 }
 
 .socialLink:hover {
-  transform: translateY(-3px);
-  opacity: 0.8;
+  transform: translateY(-4px);
 }
 
 .socialIcon {
-  width: 48px;
-  height: 48px;
-  background-color: var(--color-blueviolet);
+  width: 80px;
+  height: 80px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-white);
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .socialLink:hover .socialIcon {
-  background-color: #7c3aed;
-  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
 .socialsIcon {
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  background-color: transparent;
-  height: 48px;
-  width: 48px;
-  display: block;
+  display: none;
 }
 
 .socials {
-  cursor: pointer;
-  border: 2px solid transparent;
-  padding: 10px;
-  background-color: var(--color-blueviolet);
-  width: 48px;
-  height: 48px;
-  border-radius: 4px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.socials:hover {
-  background-color: #7c3aed;
-  transform: translateY(-3px);
+  display: none;
 }
 
 .linkedinIcon {
-  width: 24px;
-  height: 24px;
-  color: var(--color-white);
+  display: none;
 }
 
 /* Tablet Responsiveness */
@@ -225,25 +194,31 @@
   }
   
   .contactUsParent {
-    height: 48px;
-    padding: 8px 24px;
+    min-width: 240px;
+    padding: 14px 36px;
   }
   
   .contactUs {
-    font-size: 18px;
+    font-size: 20px;
   }
   
-  .socialIcon {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .socialIcon svg {
+  .arrowIcon {
     width: 20px;
     height: 20px;
   }
   
+  .socialIcon {
+    width: 64px;
+    height: 64px;
+    border-width: 2px;
+  }
+  
+  .socialIcon svg {
+    width: 28px;
+    height: 28px;
+  }
+  
   .container2 {
-    gap: 12px;
+    gap: 16px;
   }
 }
